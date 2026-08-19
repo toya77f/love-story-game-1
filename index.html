@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+  >
+
+  <title>My City 3D</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div id="game"></div>
+
+  <div id="hud">
+
+    <div id="topBar">
+      <div class="hudBox">❤️ <span id="energy">100</span></div>
+      <div class="hudBox">💰 <span id="money">500</span></div>
+      <div class="hudBox">⭐ <span id="level">1</span></div>
+    </div>
+
+    <div id="location">
+      📍 المدينة
+    </div>
+
+    <div id="mission">
+      المهمة: استكشف المدينة
+    </div>
+
+  </div>
+
+  <!-- Joystick -->
+  <div id="joystick">
+
+    <div id="joystickBase">
+      <div id="joystickStick"></div>
+    </div>
+
+  </div>
+
+  <!-- أزرار الحركة -->
+  <div id="actionButtons">
+
+    <button
+      id="sprintButton"
+      class="actionButton"
+    >
+      ⚡
+    </button>
+
+    <button
+      id="jumpButton"
+      class="actionButton"
+    >
+      ⬆️
+    </button>
+
+    <button
+      id="actionButton"
+      class="actionButton"
+    >
+      ✋
+    </button>
+
+  </div>
+
+  <div id="message">
+    اسحب من اليمين لتحريك الكاميرا 👆
+  </div>
+
+
+  <script type="module">
+
+    import * as THREE from
+      "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js";
+
+    window.THREE = THREE;
+
+    await import("./game.js");
+
+  </script>
+
+</body>
+</html>
